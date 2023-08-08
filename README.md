@@ -16,5 +16,6 @@ COPY --from=golang_ping /home/golang/pings/latency_ping /
 COPY --from=golang_ping /home/golang/pings/config.ini /
 CMD ["./latency_ping","-a","config.ini"]
 
+### modify config file
 ###RUN
 docker run -it --rm --name ping_server -v /root/golangcode/newping/config.ini:/config.ini ping_app
